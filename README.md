@@ -4,8 +4,8 @@ With ARM GitHub Action, you can automate your workflow by executing to deploy AR
 
 The action executes the Azure CLI Bash script for deployment. The parameters for the Action are:
 
-- `location` – **Required** 
-- `resource-group` – **Required** 
+- `location` – **Required** - The location of Resource Group
+- `resource-group` – **Required** - The name of Resource Group
 - `template-file` or `template-uri` – **Required** Either the local template location or the template URI must be provided
 - `parameters` – **Optional**
 - `deploymentMode` – **Optional** - Incremental (only add resources to resource group) or Complete (remove extra resources from resource group). Default: Incremental.
@@ -18,7 +18,8 @@ The definition of this GitHub Action is in [action.yml].
 ### Dependencies on other GitHub Actions
 * [Azure Login](https://github.com/Azure/login) – **Required** Login with your Azure credentials 
 * [Checkout](https://github.com/actions/checkout) – **Required** To execute the scripts present in your repository
-### Workflow to execute an AZ CLI script for template deployment using template location
+
+### Workflow for template deployment using template location
 ```
 # File: .github/workflows/workflow.yml
 
@@ -51,7 +52,7 @@ jobs:
         functionality: <Create>
         
 ```
-### Workflow to execute an AZ CLI script for template deployment using template URI
+### Workflow for template deployment using template URI
 ```
 # File: .github/workflows/workflow.yml
 
@@ -84,6 +85,10 @@ jobs:
         functionality: <Create>
 ```
   * [GITHUB_WORKSPACE](https://help.github.com/en/github/automating-your-workflow-with-github-actions/virtual-environments-for-github-hosted-runners) is the environment variable provided by GitHub which represents the root of your repository.
+
+### Output of the Action:
+
+Each ARM template deployment will result in export of an output, that can be used in subsequent Actions. For example the output is called resourceID then it will be accessible with ${{ steps.STEP.outputs.resourceID }}
 
 ### Configure Azure credentials as GitHub Secret:
 
