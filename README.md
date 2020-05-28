@@ -43,8 +43,8 @@ jobs:
     - name: Azure ARM Deployment
       uses: azure/ARM@v3
       with:
-        location: <Your resource group location>
-        resource-group: <YourResourceGroup>
+        location: <Your Resource Group Location>
+        resource-group: <Your Resource Group Name>
         template-file: <path/to/azuredeploy.json>
         parameters: <path/to/parameters.json>
         deploymentMode: <Complete/Incremental>
@@ -76,8 +76,8 @@ jobs:
     - name: Azure ARM Deployment
       uses: azure/ARM@v3
       with:
-        location: <Your resource group location>
-        resource-group: <YourResourceGroup>
+        location: <Your Resource Group Location>
+        resource-group: <Your Resource Group Name>
         template-uri: <URI of your ARM template>
         parameters: <path/to/parameters.json>
         deploymentMode: <Complete/Incremental>
