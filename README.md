@@ -1,6 +1,6 @@
 # GitHub Action for Azure Resource Manager
 
-With ARM GitHub Action, you can automate your workflow by executing to deploy ARM templates and manage Azure resources.
+With ARM GitHub Action, you can automate your workflow by deploying ARM templates to manage Azure resources.
 
 The action executes the Azure CLI Bash script for deployment. The parameters for the Action are:
 
