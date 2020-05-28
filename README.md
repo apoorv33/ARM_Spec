@@ -22,11 +22,11 @@ The definition of this GitHub Action is in [action.yml].
 ### Usage
 
 ```
-      uses: azure/ARM@v3
-      with:
-        location: <Your Resource Group Location>
-        resource-group: <Your Resource Group Name>
-        template-file: <path/to/azuredeploy.json>
+uses: azure/ARM@v3
+with:
+ location: <Your Resource Group Location>
+ resource-group: <Your Resource Group Name>
+ template-file: <path/to/azuredeploy.json>
 
 ```
 
