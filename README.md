@@ -84,7 +84,6 @@ jobs:
         deploymentMode: <Complete/Incremental>
         functionality: <Create>
 ```
-  * [GITHUB_WORKSPACE](https://help.github.com/en/github/automating-your-workflow-with-github-actions/virtual-environments-for-github-hosted-runners) is the environment variable provided by GitHub which represents the root of your repository.
 
 ### Output of the Action:
 
