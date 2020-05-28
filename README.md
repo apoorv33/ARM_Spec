@@ -2,7 +2,7 @@
 
 With ARM GitHub Action, you can automate your workflow by deploying ARM templates to manage Azure resources.
 
-The action executes the Azure CLI Bash script for deployment. The parameters for the Action are:
+The action executes the Azure CLI Bash script for deployment. The inputs for the Action are:
 
 - `location` – **Required** - The location of Resource Group
 - `resource-group` – **Required** - The name of Resource Group
