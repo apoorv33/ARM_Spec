@@ -21,7 +21,7 @@ The definition of this GitHub Action is in [action.yml].
 
 ### Usage
 
-```
+```yml
     - name: Azure ARM Deployment
       uses: azure/ARM@v3
       with:
@@ -32,7 +32,7 @@ The definition of this GitHub Action is in [action.yml].
 ```
 
 ### Workflow for template deployment using template location
-```
+```yml
 # File: .github/workflows/workflow.yml
 
 on: [push]
@@ -65,7 +65,7 @@ jobs:
         
 ```
 ### Workflow for template deployment using template URI
-```
+```yml
 # File: .github/workflows/workflow.yml
 
 on: [push]
