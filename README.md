@@ -61,7 +61,7 @@ jobs:
         template-file: <path/to/azuredeploy.json>
         parameters: <path/to/parameters.json>
         deploymentMode: <Complete/Incremental>
-        functionality: <Create>
+        functionality: <Create/Delete>
         
 ```
 ### Workflow for template deployment using template URI
@@ -94,7 +94,7 @@ jobs:
         template-uri: <URI of your ARM template>
         parameters: <path/to/parameters.json>
         deploymentMode: <Complete/Incremental>
-        functionality: <Create>
+        functionality: <Create/Delete>
 ```
 
 ### Output of the Action:
