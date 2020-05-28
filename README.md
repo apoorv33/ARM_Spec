@@ -7,7 +7,7 @@ The action executes the Azure CLI Bash script for deployment. The inputs for the
 - `location` – **Required** - The location of Resource Group
 - `resource-group` – **Required** - The name of Resource Group
 - `template-file` or `template-uri` – **Required** Either the local template location or the template URI must be provided
-- `parameters` – **Optional**
+- `parameters` – **Optional** - The location of parameters file
 - `deploymentMode` – **Optional** - Incremental (only add resources to resource group) or Complete (remove extra resources from resource group). Default: Incremental.
 - `functionality` – **Optional** - Specify if the template is for creation or deletion of the resources. Default: Create, Accepted Values: Create, Delete
 
@@ -18,6 +18,17 @@ The definition of this GitHub Action is in [action.yml].
 ### Dependencies on other GitHub Actions
 * [Azure Login](https://github.com/Azure/login) – **Required** Login with your Azure credentials 
 * [Checkout](https://github.com/actions/checkout) – **Required** To execute the scripts present in your repository
+
+### Usage
+
+```
+      uses: azure/ARM@v3
+      with:
+        location: <Your Resource Group Location>
+        resource-group: <Your Resource Group Name>
+        template-file: <path/to/azuredeploy.json>
+
+```
 
 ### Workflow for template deployment using template location
 ```
