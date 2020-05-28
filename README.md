@@ -22,7 +22,7 @@ The definition of this GitHub Action is in [action.yml].
 ### Usage
 
 ```yml
-    - name: Azure ARM Deployment
+    - name: ARM Template Deployment
       uses: azure/ARM@v3
       with:
         location: <Your Resource Group Location>
@@ -53,7 +53,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
       
-    - name: Azure ARM Deployment
+    - name: ARM Template Deployment
       uses: azure/ARM@v3
       with:
         location: <Your Resource Group Location>
@@ -86,7 +86,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
       
-    - name: Azure ARM Deployment
+    - name: ARM Template Deployment
       uses: azure/ARM@v3
       with:
         location: <Your Resource Group Location>
